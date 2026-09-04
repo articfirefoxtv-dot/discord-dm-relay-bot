@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: discord-dm-relay-bot
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_OWNER_ID
+        value: "1456456736071225519"
